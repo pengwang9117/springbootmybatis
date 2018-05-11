@@ -90,4 +90,9 @@ public class StudentController {
     public Student selectstudentall(String sname){
         return sm.selectstudentall(sname);
     }
+    
+    @RequestMapping("/selectstudentbycourse2")
+    public List<Student> selectstudentbycourse2(String cname){
+        return sm.selectstudentbycourse2(cname);
+    }
 }

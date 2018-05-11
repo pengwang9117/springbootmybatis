@@ -64,5 +64,8 @@
     <select id="selectstudentall" resultMap="getallstudent">
         select * from Student s inner join Major m on m.mid=s.mid inner join CS l on s.sid=l.csid inner join Course c on c.cid=l.ccid inner join Grade g on s.sid=g.sid and c.cid=g.cid where s.sname=#{sname}
     </select>
+    <select id="selectstudentbycourse2" resultMap="getallstudent">
+         select * from Major m, Grade g, Student s inner join CS l on s.sid=l.csid inner join Course c on c.cid=l.ccid where s.mid=m.mid and c.cid=g.cid and s.sid=g.sid and c.cname=#{cname}
+    </select>
     
 </mapper>

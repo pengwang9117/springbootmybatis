@@ -27,4 +27,5 @@ public interface StudentMapper {
     List<Student> selectstudentbygrade(int cid);
     
     Student selectstudentall(String sname);
+    List<Student> selectstudentbycourse2(String cname);
 }

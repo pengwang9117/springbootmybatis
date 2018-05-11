@@ -68,4 +68,10 @@ public class CourseController {
         return cm.selectcoursebygrade(s.getSid());
     }
     
+    
+    @RequestMapping("/selectcourseall")
+    public Course selectcourseall(String cname){
+        return cm.selectcourseall(cname);
+    }
+    
 }

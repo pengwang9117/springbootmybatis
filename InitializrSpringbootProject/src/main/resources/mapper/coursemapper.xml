@@ -53,4 +53,9 @@
 	 </association>
     </resultMap>
     
+    
+    <select id="selectcourseall" resultMap="getallcourse">
+        select * from Course c inner join Major m on m.mid=c.mid inner join CS l on c.cid=l.ccid inner join Student s on s.sid=l.csid inner join Grade g on s.sid=g.sid and c.cid=g.cid where c.cname=#{cname}
+    </select>
+    
 </mapper>

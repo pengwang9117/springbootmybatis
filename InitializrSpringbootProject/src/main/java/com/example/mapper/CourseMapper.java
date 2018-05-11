@@ -23,4 +23,6 @@ public interface CourseMapper {
     List<Course> selectcoursebymajor(String mname);
     List<Course> selectcoursebystudent(String sname);
     List<Course> selectcoursebygrade(int sid);
+    
+    Course selectcourseall(String cname);
 }
